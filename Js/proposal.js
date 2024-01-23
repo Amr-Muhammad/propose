@@ -1,13 +1,13 @@
 if (localStorage.getItem('propose')) {
 
-    if (window.location.pathname == '/propose/index.html') {
+    if ((window.location.pathname == '/propose/index.html') || window.location.pathname == '/propose/') {
         window.location.href = "/propose/proposal.html";
     }
 }
 
 else {
 
-    if ((window.location.pathname == '/propose/proposal.html') || window.location.pathname == '/yes.html') {
+    if ((window.location.pathname == '/propose/proposal.html') || window.location.pathname == '/propose/yes.html') {
         window.location.href = "/propose/index.html";
     }
 
