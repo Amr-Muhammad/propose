@@ -1,52 +1,23 @@
 // lazm el repo yb2a esmha propose
 
-if (localStorage.getItem('propose_token')) {
-
-    if ((window.location.pathname == '/propose/index.html') || (window.location.pathname == '/propose/') || (window.location.pathname == '/propose/index')) {
-        window.location.href = "/propose/proposal.html";
-    }
-}
-
-else {
-
-    if ((window.location.pathname == '/propose/proposal.html') || (window.location.pathname == '/propose/proposal') || (window.location.pathname == '/propose/yes.html') || (window.location.pathname == '/propose/yes')) {
-        window.location.href = "/propose/index.html";
-    }
-
-    document.getElementById('btn').addEventListener('click', function () {
-        if (document.getElementById('password').value == "Propose Now") {
-            genereateToken()
-
-            window.location.href = "/propose/proposal.html";
-        }
-        else {
-            document.getElementById('password').value == 'asdasd'
-        }
-
-    })
-
-}
-
-
-
-
 // if (localStorage.getItem('propose_token')) {
 
-//     if ((window.location.pathname == '/index.html') || (window.location.pathname == '/') || (window.location.pathname == '/index')) {
-//         window.location.href = "/proposal.html";
+//     if ((window.location.pathname == '/propose/index.html') || (window.location.pathname == '/propose/') || (window.location.pathname == '/propose/index')) {
+//         window.location.href = "/propose/proposal.html";
 //     }
 // }
 
 // else {
 
-//     if ((window.location.pathname == '/proposal.html') || (window.location.pathname == '/proposal') || (window.location.pathname == '/yes.html') || (window.location.pathname == '/yes')) {
-//         window.location.href = "/index.html";
+//     if ((window.location.pathname == '/propose/proposal.html') || (window.location.pathname == '/propose/proposal') || (window.location.pathname == '/propose/yes.html') || (window.location.pathname == '/propose/yes')) {
+//         window.location.href = "/propose/index.html";
 //     }
 
 //     document.getElementById('btn').addEventListener('click', function () {
 //         if (document.getElementById('password').value == "Propose Now") {
 //             genereateToken()
-//             window.location.href = "/proposal.html";
+
+//             window.location.href = "/propose/proposal.html";
 //         }
 //         else {
 //             document.getElementById('password').value == 'asdasd'
@@ -55,6 +26,35 @@ else {
 //     })
 
 // }
+
+
+
+
+if (localStorage.getItem('propose_token')) {
+
+    if ((window.location.pathname == '/index.html') || (window.location.pathname == '/') || (window.location.pathname == '/index')) {
+        window.location.href = "/proposal.html";
+    }
+}
+
+else {
+
+    if ((window.location.pathname == '/proposal.html') || (window.location.pathname == '/proposal') || (window.location.pathname == '/yes.html') || (window.location.pathname == '/yes')) {
+        window.location.href = "/index.html";
+    }
+
+    document.getElementById('btn').addEventListener('click', function () {
+        if (document.getElementById('password').value == "Propose Now") {
+            genereateToken()
+            window.location.href = "/proposal.html";
+        }
+        else {
+            document.getElementById('password').value == 'asdasd'
+        }
+
+    })
+
+}
 
 
 function nextPage() {
