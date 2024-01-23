@@ -19,7 +19,7 @@ body{
 
 #password{
     width: 100%;
-    padding: 15px 15px;
+    padding: 10px 15px;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -27,6 +27,8 @@ body{
     margin-top: 30px ;
     background-color: transparent;
     color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 .passKey{
@@ -47,9 +49,14 @@ body{
     font-style: italic;
     filter: blur(0.5px);
     cursor: pointer;
+    box-shadow: inset 0px 0px 20px black;
+
 }
 
 .btn:hover{
-    background-color:rgb(28, 6, 41);
+    background-color:rgba(18, 77, 0, 0.705);
+    box-shadow: 5px 10px 20px 2px black;
     color: white;
+    filter: blur(0px);
+
 }

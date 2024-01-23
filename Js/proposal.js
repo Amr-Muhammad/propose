@@ -1,3 +1,5 @@
+//lazm el repo yb2a esmha propose
+
 if (localStorage.getItem('propose')) {
 
     if ((window.location.pathname == '/propose/index.html') || window.location.pathname == '/propose/') {
