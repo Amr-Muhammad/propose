@@ -1,20 +1,20 @@
 if (localStorage.getItem('propose')) {
 
-    if (window.location.pathname == '/index.html') {
-        window.location.href = "/proposal.html";
+    if (window.location.pathname == '/propose/index.html') {
+        window.location.href = "/propose/proposal.html";
     }
 }
 
 else {
 
-    if ((window.location.pathname == '/proposal.html') || window.location.pathname == '/yes.html') {
-        window.location.href = "/index.html";
+    if ((window.location.pathname == '/propose/proposal.html') || window.location.pathname == '/yes.html') {
+        window.location.href = "/propose/index.html";
     }
 
     document.getElementById('btn').addEventListener('click', function () {
         if (document.getElementById('password').value == "Propose Now") {
             localStorage.setItem('propose', "I'm ready to propose")
-            window.location.href = "/proposal.html";
+            window.location.href = "/propose/proposal.html";
         }
         else {
             document.getElementById('password').value == 'asdasd'
