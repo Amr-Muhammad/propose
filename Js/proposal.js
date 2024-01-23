@@ -1,4 +1,4 @@
-//lazm el repo yb2a esmha propose
+// lazm el repo yb2a esmha propose
 
 if (localStorage.getItem('propose')) {
 
@@ -15,7 +15,8 @@ else {
 
     document.getElementById('btn').addEventListener('click', function () {
         if (document.getElementById('password').value == "Propose Now") {
-            localStorage.setItem('propose', "I'm ready to propose")
+            genereateToken()
+
             window.location.href = "/propose/proposal.html";
         }
         else {
@@ -27,6 +28,35 @@ else {
 }
 
 
+
+
+// if (localStorage.getItem('proposeToken')) {
+
+//     if ((window.location.pathname == '/index.html') || (window.location.pathname == '/') || (window.location.pathname == '/index')) {
+//         window.location.href = "/proposal.html";
+//     }
+// }
+
+// else {
+
+//     if ((window.location.pathname == '/proposal.html') || (window.location.pathname == '/proposal') || (window.location.pathname == '/yes.html') || (window.location.pathname == '/yes')) {
+//         window.location.href = "/index.html";
+//     }
+
+//     document.getElementById('btn').addEventListener('click', function () {
+//         if (document.getElementById('password').value == "Propose Now") {
+//             genereateToken()
+//             window.location.href = "/proposal.html";
+//         }
+//         else {
+//             document.getElementById('password').value == 'asdasd'
+//         }
+
+//     })
+
+// }
+
+
 function nextPage() {
     window.location.href = "yes.html";
 }
@@ -36,4 +66,13 @@ function moveButton() {
     let y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight - 48);
     document.getElementById('noButton').style.left = `${x}px`;
     document.getElementById('noButton').style.top = `${y}px`;
+}
+
+function genereateToken() {
+    alpha = 'abcdefghijklmnopqrstuvwxyz0123456789'
+    let token = ''
+    for (let i = 0; i < alpha.length; i++) {
+        token = token + alpha.charAt((Math.floor(Math.random() * alpha.length)))
+    }
+    localStorage.setItem('proposeToken', token)
 }
