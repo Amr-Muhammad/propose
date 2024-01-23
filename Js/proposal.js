@@ -1,6 +1,6 @@
 // lazm el repo yb2a esmha propose
 
-if (localStorage.getItem('Propose Token')) {
+if (localStorage.getItem('propose_token')) {
 
     if ((window.location.pathname == '/propose/index.html') || (window.location.pathname == '/propose/') || (window.location.pathname == '/propose/index')) {
         window.location.href = "/propose/proposal.html";
@@ -30,7 +30,7 @@ else {
 
 
 
-// if (localStorage.getItem('Propose Token')) {
+// if (localStorage.getItem('propose_token')) {
 
 //     if ((window.location.pathname == '/index.html') || (window.location.pathname == '/') || (window.location.pathname == '/index')) {
 //         window.location.href = "/proposal.html";
@@ -74,5 +74,5 @@ function genereateToken() {
     for (let i = 0; i < alpha.length; i++) {
         token = token + alpha.charAt((Math.floor(Math.random() * alpha.length)))
     }
-    localStorage.setItem('Propose Token', token)
+    localStorage.setItem('propose_token', token)
 }
